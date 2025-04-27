@@ -12,6 +12,14 @@ rules.push({
 	],
 });
 
+rules.push({
+	test: /\.(svg|png|jpg|jpeg|gif)$/i,
+	type: "asset/resource",
+	generator: {
+		filename: "assets/[name][ext]",
+	},
+});
+
 export const rendererConfig: Configuration = {
 	module: {
 		rules,
